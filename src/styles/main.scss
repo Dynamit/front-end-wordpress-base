@@ -1,0 +1,14 @@
+// vendors should be loaded first for easier overriding
+@import 'vendors/normalize';
+@import 'vendors/wordpress';
+
+// partials
+@import 'partials/variables';
+@import 'partials/mixins';
+@import 'partials/typography';
+
+// components
+// @import 'components/header';
+// @import 'components/nav';
+// @import 'components/region';
+// @import 'components/footer';
