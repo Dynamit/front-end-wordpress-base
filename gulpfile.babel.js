@@ -110,7 +110,10 @@ gulp.task('browser-sync', () => {
 // will auto-update browsers
 gulp.task('sass', () => {
   return gulp.src('src/**/*.scss')
-    .pipe(sass({outputStyle: 'compressed'}))
+    .pipe(sass({
+      outputStyle: 'compressed',
+      errLogToConsole: true
+    }).on('error', sass.logError))
     .pipe(autoprefixer())
     .pipe(gulp.dest('./assets/'))
     .pipe(reload({stream:true}));
