@@ -23,4 +23,10 @@
   	}
   }
 
+  /*
+    Disable WordPress XML-RPC
+    This is rarely necessary to have enabled and is the cause of many DDoS attacks.
+   */
+  add_filter('xmlrpc_enabled', '__return_false');
+
 ?>
